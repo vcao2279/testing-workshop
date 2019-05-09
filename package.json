@@ -31,7 +31,6 @@
     "cy:open": "cypress open",
     "lint": "eslint . --cache --cache-location node_modules/.cache/eslint",
     "validate": "concurrently --names \"lint,test:run,test:e2e\" --prefix \"[{name}]\" --prefix-colors \"bgGreen.reset.bold,bgBlue.reset.bold,bgRed.reset.bold\" \"npm run lint --silent\" \"npm run test:run --silent\" \"npm run test:e2e:run --silent\"",
-    "precommit": "lint-staged && npm run --silent validate",
     "clean": "rimraf node_modules ./shared/node_modules ./client/node_modules ./server/node_modules ./other/configuration/calculator/node_modules ./other/configuration/calculator.solution/node_modules",
     "setup": "node ./scripts/verify && node ./scripts/install && npm run validate && node ./scripts/autofill-feedback-email.js"
   },
@@ -55,7 +54,6 @@
     "eslint-plugin-flowtype": "^2.50.0",
     "faker": "^4.1.0",
     "fs-extra": "^7.0.0",
-    "husky": "^0.14.3",
     "inquirer": "^6.0.0",
     "is-ci": "^1.1.0",
     "jest": "^23.4.1",
